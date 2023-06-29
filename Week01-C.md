@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/7kb33cZ7SL2j4dpYRPPX4w/badge)](https://hackmd.io/7kb33cZ7SL2j4dpYRPPX4w)
 
 ### [回到學習討論區](https://hackmd.io/@thecutekoala/ryenf9u_n)
 
@@ -8,6 +9,8 @@
 3. 重新啟動終端機：在設定完環境變數後，請關閉並重新打開你的終端機或命令提示字元視窗，以使變更生效。
  
  以上供參考，現階段課程在cs50.dev上面運作及可。
+ 
+ ---
  
  ## 1. CLI指令
  
@@ -34,6 +37,9 @@
  [manual.cs50.io](https://manual.cs50.io/)
  簡短的介紹各種C語言的標準輸入輸出頭文件（Standard Input/Output Header File）
  提供了許多用於進行輸入和輸出操作的函數和相關定義等資訊。
+ 
+ ---
+ 
  
  ## 2. C 語法
  
@@ -294,7 +300,7 @@ y=2000000000
 
 稱為**整數溢出(integer overflow)**
 
-> 因為一個int只能用32bits
+> 因為一個int只能用32bits(4bytes)
 > 32個0與1只能構成正負20幾億
 > 因此要改為long將儲存容量擴增為64bits
 > (容量約為正負4*10^19)
@@ -377,19 +383,33 @@ solve: 型別double
     long y = get_int("y: ");
 
     double z = (double) x / (double) y;
-    printf("%.30f\n", z);
+    printf("%.30lf\n", z);
 }
 ```
 > x = 1
 > y = 0.333333333333333314829616256247
 
-可以精確至小數點以下第16位
+可以精確至小數點以下第16位0
 
-## 3. 其他型別
+---
 
-...待更新
+## 3. 資料型態關鍵字
+
+1. char 字符型別，儲存字母或符號，格式化字串：%c
+
+2. int 整數型別，儲存整數，格式化字串：%i
+
+3. long 長整數型別，儲存整數，格式化字串：%li
+
+4. float 浮點數型別，儲存小數，格式化字串：%f
+
+5. double 雙精度浮點型別，儲存小數，格式化字串：%lf
+
+---
+
 
 ## 4. 作業
 
 [lab 1](https://cs50.harvard.edu/x/2023/labs/1/)
+
 [problem set 1](https://cs50.harvard.edu/x/2023/psets/1/)
